@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صالون حازم للسيدات | Hazem Beauty Lounge</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        gold: {
+                            100: '#FDF7E2',
+                            300: '#F4D77D',
+                            500: '#D4AF37', // Classic Gold
+                            700: '#997A15',
+                            900: '#524006',
+                        },
+                        dark: {
+                            900: '#111111',
+                            800: '#1A1A1A',
+                            700: '#2A2A2A',
+                        }
+                    },
+                    backgroundImage: {
+                        'gold-gradient': 'linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #111111;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .text-gradient-gold {
+            background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .border-gradient-gold {
+            border-image: linear-gradient(to right, #BF953F, #FCF6BA, #B38728) 1;
+        }
+        .hover-gold-glow:hover {
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111111; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #BF953F; 
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-black">
+
+    <nav class="fixed w-full z-50 bg-dark-900/90 backdrop-blur-md border-b border-gold-500/20 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="275083011_5485984178083073_3837854700912860316_n.jpg" alt="Hazem Beauty Lounge Logo" class="h-16 w-16 rounded-full border-2 border-gold-500 object-cover shadow-[0_0_10px_rgba(212,175,55,0.3)]">
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl font-bold tracking-wider text-white font-serif uppercase">Hazem Beauty</h1>
+                        <p class="text-xs text-gold-300 tracking-[0.2em] uppercase">Lounge</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-reverse space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-gold-300 transition-colors text-sm font-medium">الرئيسية</a>
+                    <a href="#services" class="text-gray-300 hover:text-gold-300 transition-colors text-sm font-medium">خدماتنا</a>
+                    <a href="#nails-section" class="text-gold-500 hover:text-gold-300 transition-colors text-sm font-bold flex items-center gap-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                        قسم الأظافر
+                    </a>
+                    <a href="#gallery" class="text-gray-300 hover:text-gold-300 transition-colors text-sm font-medium">معرض الصور</a>
+                    <a href="#contact" class="text-gray-300 hover:text-gold-300 transition-colors text-sm font-medium">اتصل بنا</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/962792333353" target="_blank" class="bg-gold-gradient text-black font-bold py-2 px-6 rounded-full hover-gold-glow transition-all duration-300 transform hover:scale-105 flex items-center gap-2">
+                        <span>احجزي موعدك</span>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gold-500 hover:text-white focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-800 border-t border-gold-500/20">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-base font-medium text-white hover:text-gold-300 hover:bg-dark-700 rounded-md">الرئيسية</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-white hover:text-gold-300 hover:bg-dark-700 rounded-md">خدماتنا</a>
+                <a href="#nails-section" class="block px-3 py-2 text-base font-medium text-gold-500 hover:text-gold-300 hover:bg-dark-700 rounded-md">قسم الأظافر (مميز)</a>
+                <a href="#gallery" class="block px-3 py-2 text-base font-medium text-white hover:text-gold-300 hover:bg-dark-700 rounded-md">معرض الصور</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-white hover:text-gold-300 hover:bg-dark-700 rounded-md">اتصل بنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-24 pb-12 lg:pt-32 lg:pb-24 overflow-hidden min-h-[90vh] flex items-center">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="484907104_23911432008445010_7962916905409728886_n.jpg" alt="Hazem Beauty Lounge Banner" class="w-full h-full object-cover object-center opacity-40">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-900 via-dark-900/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-dark-900 via-dark-900/50 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center lg:text-right flex flex-col lg:flex-row items-center">
+            <div class="lg:w-3/5 pt-10 lg:pt-0">
+                <div class="inline-block px-4 py-1 rounded-full border border-gold-500/50 bg-dark-800/50 backdrop-blur-sm mb-6">
+                    <span class="text-gold-300 text-sm font-semibold tracking-wide">⭐ 4.8 تقييم على جوجل | وجهتك الأولى للجمال</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                    اكتشفي سر جمالك مع <br>
+                    <span class="text-gradient-gold font-serif">صالون حازم</span>
+                </h1>
+                <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                    نقدم لكِ أحدث صيحات الموضة في عالم التجميل، من العناية بالشعر، المكياج الاحترافي، إلى العناية المتكاملة بالأظافر. تجربة فاخرة تليق بكِ.
+                </p>
+                
+                <!-- Highlights Badges -->
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-10">
+                    <div class="flex items-center gap-2 bg-dark-800/80 border border-gold-500/30 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        <span class="text-sm font-medium">قسم خاص للمحجبات</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-dark-800/80 border border-gold-500/30 px-4 py-2 rounded-lg">
+                        <svg class="w-5 h-5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
+                        <span class="text-sm font-medium">خبراء متخصصون</span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#services" class="bg-gold-gradient text-black font-bold text-lg py-3 px-8 rounded-full hover-gold-glow transition-all transform hover:-translate-y-1 text-center">
+                        اكتشفي خدماتنا
+                    </a>
+                    <a href="https://wa.me/962792333353" target="_blank" class="bg-transparent border-2 border-gold-500 text-gold-500 font-bold text-lg py-3 px-8 rounded-full hover:bg-gold-500 hover:text-black transition-all text-center flex items-center justify-center gap-2">
+                        <span>تواصل عبر واتساب</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Floating Elements/Images for visual interest -->
+            <div class="hidden lg:block lg:w-2/5 relative h-[500px]">
+                <img src="275083011_5485984178083073_3837854700912860316_n.jpg" alt="Logo Large" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.4)] opacity-80 animate-pulse-slow">
+            </div>
+        </div>
+    </section>
+
+    <section id="nails-section" class="py-20 bg-dark-800 relative border-y border-gold-500/20">
+        <!-- Decorative subtle background -->
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#D4AF37 1px, transparent 1px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-gold-500 font-bold tracking-wider uppercase text-sm mb-2 block">عناية فائقة الدقة</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">عالم <span class="text-gradient-gold">الأظافر</span> الفاخر</h2>
+                <p class="text-gray-400 text-lg">نقدم لكِ أحدث تقنيات العناية بالأظافر مع ضمان أعلى مستويات النظافة والتعقيم. دعي أظافرك تتحدث عن أنوثتك.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Nail Service 1 -->
+                <div class="bg-dark-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="WhatsApp Image 2026-07-30 at 4.09.21 PM.jpeg" alt="جل اكستنشن" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent"></div>
+                        <div class="absolute bottom-4 right-4 bg-gold-500 text-black text-xs font-bold px-3 py-1 rounded-full">الأكثر طلباً</div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">جل اكستنشن</h3>
+                        <p class="text-gray-400 text-sm mb-4">تطويل الأظافر باستخدام الجل بجودة عالية لمظهر طبيعي وقوي يدوم طويلاً.</p>
+                        <a href="https://wa.me/962792333353?text=مرحبا، أود الاستفسار عن خدمة الجل اكستنشن" class="inline-block text-gold-500 hover:text-white border-b border-gold-500 pb-1 transition-colors">احجزي الآن &larr;</a>
+                    </div>
+                </div>
+
+                <!-- Nail Service 2 -->
+                <div class="bg-dark-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500/50 transition-all duration-300 group">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="WhatsApp Image 2026-07-30 at 4.08.57 PM.jpeg" alt="بديكير ومنيكير" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent"></div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">بديكير ومنيكير</h3>
+                        <p class="text-gray-400 text-sm mb-4">تنظيف عميق، إزالة الجلد الميت، وعناية فائقة تترك يديك وقدميك بنعومة الحرير.</p>
+                        <a href="https://wa.me/962792333353?text=مرحبا، أود حجز موعد بديكير ومنيكير" class="inline-block text-gold-500 hover:text-white border-b border-gold-500 pb-1 transition-colors">احجزي الآن &larr;</a>
+                    </div>
+                </div>
+
+                <!-- Nail Service 3 -->
+                <div class="bg-dark-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-gold-500/50 transition-all duration-300 group">
+                     <div class="h-64 overflow-hidden relative">
+                        <video src="WhatsApp Video 2026-07-30 at 4.09.22 PM.mp4" autoplay loop muted playsinline class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"></video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-900 to-transparent"></div>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-2xl font-bold text-white mb-2">طلاء أظافر (جلش)</h3>
+                        <p class="text-gray-400 text-sm mb-4">طلاء أظافر احترافي يدوم طويلاً بدون تقشر، مع تشكيلة واسعة من أحدث الألوان.</p>
+                        <a href="https://wa.me/962792333353?text=مرحبا، أود حجز موعد طلاء أظافر" class="inline-block text-gold-500 hover:text-white border-b border-gold-500 pb-1 transition-colors">احجزي الآن &larr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 bg-dark-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">خدمات <span class="text-gradient-gold">الصالون</span> المتكاملة</h2>
+                <div class="w-24 h-1 bg-gold-gradient mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Bridal Makeup -->
+                <div class="flex flex-col sm:flex-row bg-dark-800 rounded-2xl overflow-hidden shadow-lg border border-gray-800 hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] transition-shadow">
+                    <div class="sm:w-2/5 h-64 sm:h-auto relative">
+                        <img src="490108833_24053762770878599_8260584958460003787_n.jpg" alt="تجهيز عرائس" class="w-full h-full object-cover object-top">
+                    </div>
+                    <div class="sm:w-3/5 p-6 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-gold-400 mb-3">تجهيز العرائس (مكياج وشعر)</h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">نجعل يوم زفافك استثنائياً مع باقات العروس المتكاملة. مكياج احترافي يبرز جمالك وتسريحات شعر تواكب أحدث الصيحات العالمية.</p>
+                        <ul class="text-gray-400 text-sm mb-4 space-y-1">
+                            <li class="flex items-center gap-2"><span class="text-gold-500">✓</span> مكياج سينمائي</li>
+                            <li class="flex items-center gap-2"><span class="text-gold-500">✓</span> تسريحات ملكية</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Curly Extension -->
+                <div class="flex flex-col sm:flex-row bg-dark-800 rounded-2xl overflow-hidden shadow-lg border border-gray-800 hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] transition-shadow">
+                    <div class="sm:w-2/5 h-64 sm:h-auto relative">
+                        <img src="489915232_1134251378729465_317809636966977452_n.jpg" alt="تركيب شعر كيرلي" class="w-full h-full object-cover">
+                    </div>
+                    <div class="sm:w-3/5 p-6 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-gold-400 mb-3">تركيب شعر كيرلي و اكستنشن</h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">إضافة كثافة وطول لشعرك بأساليب آمنة واحترافية. متخصصون في تركيب الشعر الكيرلي والطبيعي بألوان تتطابق مع لون شعرك.</p>
+                        <a href="https://wa.me/962792333353" class="text-gold-500 text-sm font-bold flex items-center gap-1 hover:text-white w-fit">احجزي استشارة <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg></a>
+                    </div>
+                </div>
+
+                <!-- Protein Treatment -->
+                <div class="flex flex-col sm:flex-row bg-dark-800 rounded-2xl overflow-hidden shadow-lg border border-gray-800 hover:shadow-[0_0_20px_rgba(212,175,55,0.15)] transition-shadow">
+                    <div class="sm:w-2/5 h-64 sm:h-auto relative">
+                        <img src="489824332_1134251472062789_7955773326637546031_n.jpg" alt="بروتين الشعر" class="w-full h-full object-cover">
+                        <!-- Before/After label logic usually handled by the image itself based on the provided sample, but adding a badge just in case -->
+                        <div class="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">قبل / بعد</div>
+                    </div>
+                    <div class="sm:w-3/5 p-6 flex flex-col justify-center">
+                        <h3 class="text-2xl font-bold text-gold-400 mb-3">علاجات الشعر (بروتين / كيراتين)</h3>
+                        <p class="text-gray-300 text-sm mb-4 leading-relaxed">استعيدي حيوية شعرك ونعومته مع أفضل أنواع البروتين والكيراتين الأصلية الخالية من الفورمالين. نتائج مذهلة وشعر صحي.</p>
+                    </div>
+                </div>
+
+                <!-- Highlight: Hijab Section -->
+                <div class="flex flex-col sm:flex-row bg-gradient-to-br from-dark-800 to-dark-900 border border-gold-500/50 rounded-2xl overflow-hidden shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                    <div class="p-8 flex flex-col justify-center items-center text-center w-full relative overflow-hidden">
+                        <svg class="w-16 h-16 text-gold-500/20 absolute -bottom-4 -left-4 transform rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 100-16 8 8 0 000 16zm-1-5h2v2h-2v-2zm0-8h2v6h-2V7z"/></svg>
+                        
+                        <div class="bg-gold-500/10 p-4 rounded-full mb-4 border border-gold-500/30">
+                            <svg class="w-10 h-10 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">قسم خاص للمحجبات</h3>
+                        <p class="text-gray-300 text-sm mb-0">نلبي احتياجاتكِ بخصوصية تامة وراحة مطلقة في قسم مخصص ومستقل بالكامل للمحجبات، لتستمتعي بجميع خدماتنا براحة بال.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-dark-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-8">زورونا في <span class="text-gradient-gold">صالون حازم</span></h2>
+                    
+                    <div class="space-y-6">
+                        <!-- Location -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-dark-800 p-3 rounded-lg border border-gray-700">
+                                <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">الموقع</h4>
+                                <p class="text-gray-400">الصويفية / شارع الحمرا / مقابل افينيو مول</p>
+                                <p class="text-gray-500 text-sm">(شارع طارق الجدي، عمّان)</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-dark-800 p-3 rounded-lg border border-gray-700">
+                                <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">رقم الهاتف & واتساب</h4>
+                                <a href="tel:0792333353" class="text-gray-400 hover:text-gold-500 transition-colors block text-left w-fit" dir="ltr">+962 7 9233 3353</a>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-start gap-4">
+                            <div class="bg-dark-800 p-3 rounded-lg border border-gray-700">
+                                <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-1">ساعات العمل</h4>
+                                <p class="text-gray-400">يومياً من 9:30 صباحاً حتى المساء</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://wa.me/962792333353" target="_blank" class="w-full sm:w-auto inline-block text-center bg-green-600 hover:bg-green-500 text-white font-bold py-3 px-8 rounded-lg transition-colors">
+                            احجزي موعدك الآن عبر واتساب
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Image/Map Placeholder -->
+                <div class="relative h-[400px] rounded-2xl overflow-hidden border border-gray-800 shadow-xl group">
+                    <img src="8B0BCC96-343F-4BD3-A3EE-924DFF53F09C}.png" onerror="this.src='https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="موقع الصالون" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                        <div class="bg-dark-900/90 backdrop-blur p-4 rounded-xl text-center border border-gold-500/30">
+                            <p class="text-white font-bold mb-2">صالون حازم للسيدات</p>
+                            <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm">
+                                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                                <span class="text-white ml-2">4.8 (74 تعليق)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-10 border-t border-gold-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3">
+                <img src="275083011_5485984178083073_3837854700912860316_n.jpg" alt="Logo Small" class="w-10 h-10 rounded-full border border-gold-500">
+                <span class="text-white font-serif font-bold text-xl">HAZEM <span class="text-gold-500 text-sm font-sans font-normal">Beauty Lounge</span></span>
+            </div>
+            
+            <p class="text-gray-500 text-sm text-center md:text-right">
+                &copy; 2026 جميع الحقوق محفوظة لصالون حازم للسيدات - Be beautiful with Hazim Beauty Center
+            </p>
+
+            <!-- Social placeholders based on provided images -->
+            <div class="flex gap-4">
+                <a href="https://web.facebook.com/Hazimsaloon/" target="_blank" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#1877F2] transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full bg-dark-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-red-500 hover:to-purple-500 transition-all">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.20 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg', 'bg-dark-900/95');
+                navbar.classList.remove('bg-dark-900/90');
+            } else {
+                navbar.classList.remove('shadow-lg', 'bg-dark-900/95');
+                navbar.classList.add('bg-dark-900/90');
+            }
+        });
+    </script>
+</body>
+</html>
